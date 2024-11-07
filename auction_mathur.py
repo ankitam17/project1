@@ -1,3 +1,5 @@
+import random
+
 class User:
     '''Class to represent a user with a secret probability of clicking an ad.'''
 
