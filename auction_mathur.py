@@ -1,6 +1,9 @@
 import random
 from bidder_mathur import Bidder
 
+import random
+from bidder_mathur import Bidder
+
 class User:
     '''Class to represent a user with a secret probability of clicking an ad.'''
 
@@ -39,16 +42,14 @@ class Auction:
         bids.sort(key=lambda x: x[1], reverse=True)  # Sort bidders by bid
 
         if len(bids) < 2:
-            return  # Not enough bidders to determine a second-highest price
+            return  # Not enough bidders 
 
         winning_bidder, highest_bid = bids[0]
         _, second_highest_bid = bids[1]
 
-        price = second_highest_bid  # Second-highest bid is the price
-        clicked = user.show_ad()  # Check if user clicks
+        price = second_highest_bid  # Second-highest bid 
+        clicked = user.show_ad()  # Check clicks
 
         winning_bidder.notify(True, price, clicked)  # Notify winner
         for bidder, bid_amount in bids[1:]:
             bidder.notify(False, price, False)  # Notify losing bidders
-E
-        
