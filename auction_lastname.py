@@ -5,14 +5,13 @@ class User:
         '''Generating a probability between 0 and 1 from a uniform distribution'''
         self.prob = random.uniform(0, 1)
 
-
     def __repr__(self):
-        '''User object with secret probability'''
         return f"User(prob={self.prob:.2f})"
+        '''User object with secret probability'''       
 
     def __str__(self):
-        '''User object with a secret likelihood of clicking on an ad'''
         return f"User with click probability: {self.prob:.2f}"
+        '''User object with a secret likelihood of clicking on an ad'''
 
     def show_ad(self):
         '''Returns True to represent the user clicking on an ad or False otherwise'''
@@ -27,17 +26,14 @@ class Auction:
         self.bidders = bidders
         self.balances = {bidder: bidder.balance for bidder in bidders}
 
-
     def __repr__(self):
         '''Return auction object with users and qualified bidders'''
-        return f"Auction with {len(self.users)} users and {len(self.bidders)} bidders"
-    
+        return f"Auction with: {len(self.users)} users and {len(self.bidders)} bidders"
 
     def __str__(self):
         '''Return auction object with users and qualified bidders'''
-         return f"Auction with {len(self.users)} users and {len(self.bidders)} bidders"
+        return f"Auction with {len(self.users)} users and {len(self.bidders)} bidders"
     
-
     def execute_round(self):
         '''Executes a single round of an auction, completing the following steps:
             - random user selection
