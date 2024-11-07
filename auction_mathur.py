@@ -1,4 +1,5 @@
 import random
+from bidder_lastname import Bidder
 
 class User:
     '''Class to represent a user with a secret probability of clicking an ad.'''
