@@ -1,11 +1,5 @@
-import random
 
-class RefBidder(Bidder):
-    '''RefBidder inherits from Bidder'''
-    
-    def __init__(self, num_users, num_rounds):
-        '''Initialize RefBidder and call parent constructor to set balance'''
-        super().__init__(num_users, num_rounds)  # Call to ensure balance is set
+import random
 
 class Bidder:
     '''Class to represent a bidder in an online second-price ad auction'''
@@ -44,3 +38,10 @@ class Bidder:
             print(f"Round {self.round_counter}: Won auction at ${price:.2f}. User {result}. Balance: ${self.balance:.2f}")
         else:
             print(f"Round {self.round_counter}: Lost auction. Balance: ${self.balance:.2f}")
+            
+class RefBidder(Bidder):
+    '''RefBidder inherits from Bidder'''
+    
+    def __init__(self, num_users, num_rounds):
+        '''Initialize RefBidder and call parent constructor to set balance'''
+        super().__init__(num_users, num_rounds)  # Call to ensure balance is set
