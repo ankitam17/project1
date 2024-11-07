@@ -12,7 +12,7 @@ class Bidder:
         
 
     def __repr__(self):
-       '''Return Bidder object'''
+        '''Return Bidder object'''
         return f"Bidder(num_users={self.num_users}, num_rounds={self.num_rounds}, balance={self.balance})"
     
 
