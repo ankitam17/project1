@@ -1,13 +1,13 @@
 import random
 
 class Bidder:
-    '''Class to represent a bidder in an online second-price ad auction'''
+    '''Class to represent a bidder in auction'''
     
     def __init__(self, num_users, num_rounds):
-        '''Setting number of users, number of rounds, and initializing balance'''
+        '''Setting number of users, number of rounds, and balance'''
         self.num_users = num_users
         self.num_rounds = num_rounds
-        self.balance = 0  # Tracking balance for auction spending
+        self.balance = 0  # Tracking balance 
 
     def __repr__(self):
         return f"Bidder(num_users={self.num_users}, num_rounds={self.num_rounds}, balance={self.balance})"
@@ -22,4 +22,4 @@ class Bidder:
     def notify(self, auction_winner, price, clicked):
         '''Updates balance based on auction result (price if they won)'''
         if auction_winner:
-            self.balance -= price  # Deduct the second-highest bid if won
+            self.balance -= price 
